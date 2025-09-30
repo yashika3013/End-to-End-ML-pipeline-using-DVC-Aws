@@ -55,21 +55,32 @@ Key aspects of this project:
 ## 📂 Project Structure  
 End-to-End-ML-pipeline-using-DVC-Aws/
 │
-├── experiments/
-│ ├── mynotebook.ipynb # Jupyter notebook for data exploration & initial modeling
-│ └── spam.csv # Dataset
+├── .dvc/                         # DVC internal files
+├── .git/                         # Git internal files
+├── experiments/                  # Experimental work
+│   ├── mynotebook.ipynb         # EDA and prototyping
+│   └── spam.csv                 # Original dataset
 │
-├── src/
-│ ├── data_ingestion.py # Load raw dataset
-│ ├── data_preprocessing.py # Clean and preprocess text
-│ ├── feature_engineering.py # Apply stemming, TF-IDF, etc.
-│ ├── model_building.py # Train ML models
-│ ├── model_evaluation.py # Evaluate models
+├── src/                         # Modular pipeline source code
+│   ├── data_ingestion.py        # Load and validate data
+│   ├── data_preprocessing.py    # Text cleaning & stemming
+│   ├── feature_Engineering.py   # TF-IDF vectorization
+│   ├── model_building.py        # Model training
+│   └── model_evaluation.py      # Performance metrics
 │
-├── dvc.yaml # DVC pipeline definition
-├── .dvc/ # DVC metadata
-├── requirements.txt # Python dependencies
-└── README.md # Project documentation
+├── data/                        # Processed data (DVC tracked)
+│   ├── raw/                     # Raw data files
+│   ├── processed/               # Cleaned data
+│   └── features/                # Feature sets
+│
+├── models/                      # Trained models (DVC tracked)
+│   └── spam_classifier.pkl     # Serialized model
+│
+├── params.yaml                  # Configuration parameters
+├── dvc.yaml                     # Pipeline definition
+├── requirements.txt             # Python dependencies
+├── .gitignore                   # Git ignore rules
+└── README.md                    # Project documentation
 
 ---
 
