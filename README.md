@@ -53,36 +53,32 @@ Key aspects of this project:
 ---
 
 ## 📂 Project Structure  
+
+```bash
 End-to-End-ML-pipeline-using-DVC-Aws/
 │
 ├── .dvc/                         # DVC internal files
-├── .git/                         # Git internal files
+├── .dvclive/                      
 ├── experiments/                  # Experimental work
-│   ├── mynotebook.ipynb         # EDA and prototyping
-│   └── spam.csv                 # Original dataset
+│   ├── mynotebook.ipynb          # EDA and prototyping
+│   └── spam.csv                  # Original dataset
 │
-├── src/                         # Modular pipeline source code
-│   ├── data_ingestion.py        # Load and validate data
-│   ├── data_preprocessing.py    # Text cleaning & stemming
-│   ├── feature_Engineering.py   # TF-IDF vectorization
-│   ├── model_building.py        # Model training
-│   └── model_evaluation.py      # Performance metrics
+├── src/                          # Modular pipeline source code
+│   ├── data_ingestion.py         # Load and validate data
+│   ├── data_preprocessing.py     # Text cleaning & stemming
+│   ├── feature_Engineering.py    # TF-IDF vectorization
+│   ├── model_building.py         # Model training
+│   └── model_evaluation.py       # Performance metrics
 │
-├── data/                        # Processed data (DVC tracked)
-│   ├── raw/                     # Raw data files
-│   ├── processed/               # Cleaned data
-│   └── features/                # Feature sets
-│
-├── models/                      # Trained models (DVC tracked)
-│   └── spam_classifier.pkl     # Serialized model
-│
-├── params.yaml                  # Configuration parameters
-├── dvc.yaml                     # Pipeline definition
-├── requirements.txt             # Python dependencies
-├── .gitignore                   # Git ignore rules
-└── README.md                    # Project documentation
+├── params.yaml                   # Configuration parameters
+├── dvc.yaml                      # Pipeline definition
+├── dvc.lock                      
+├── .gitignore                    # Git ignore rules
+└── README.md                     # Project documentation
+├── .dvcignore
+├── .gitignore                    
 
----
+```
 
 ## 🔄 Workflow  
 
